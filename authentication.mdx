@@ -1,0 +1,176 @@
+---
+title: Authentication and Account Management
+description: Understand how to securely access your account, manage permissions, and handle login issues in Zwift Community.
+---
+
+## Overview
+
+Secure authentication ensures you can safely access Zwift Community features like team management, event participation, and personal dashboards. Zwift Community supports multiple login methods including email/password and OAuth providers. You manage user roles for team admins, members, and guests, with built-in verification and recovery processes.
+
+<Callout kind="info">
+Zwift Community prioritizes security with OAuth 2.0, rate limiting, and encrypted sessions. Always use HTTPS endpoints.
+</Callout>
+
+## Authentication Methods
+
+Choose from flexible login options tailored to your needs.
+
+<Tabs>
+  <Tab title="Email/Password" icon="mail">
+
+    Create an account or log in directly via email.
+
+    <Steps>
+      <Step title="Sign Up" icon="user-plus">
+        Visit `https://zwift.community/login` and enter your email and password.
+      </Step>
+      <Step title="Verify Email" icon="check-circle">
+        Check your inbox for a verification link and click to confirm.
+      </Step>
+      <Step title="Log In" icon="log-in">
+        Return to the login page and authenticate.
+      </Step>
+    </Steps>
+
+  </Tab>
+  <Tab title="OAuth (Google)" icon="google">
+
+    Use Google for seamless single sign-on.
+
+````jsx
+<CodeGroup tabs="JavaScript,Python">
+```javascript
+// Redirect to OAuth endpoint
+const authUrl = `https://auth.example.com/oauth/google?redirect_uri=${encodeURIComponent('https://zwift.community/callback')}&client_id=YOUR_CLIENT_ID`;
+window.location.href = authUrl;
+```
+
+```python
+import webbrowser
+auth_url = f"https://auth.example.com/oauth/google?redirect_uri=https://zwift.community/callback&client_id=YOUR_CLIENT_ID"
+webbrowser.open(auth_url)
+```
+````
+
+  </Tab>
+</Tabs>
+
+## API Authentication Parameters
+
+Use these parameters for programmatic access to Zwift Community APIs.
+
+<ParamField header="Authorization" param-type="string" required="true">
+Bearer `{YOUR_ACCESS_TOKEN}` for all authenticated requests.
+</ParamField>
+
+<ParamField query="client_id" param-type="string" required="true">
+Your application client ID from the developer dashboard.
+</ParamField>
+
+<ParamField query="redirect_uri" param-type="string" required="false">
+Callback URL after authentication (max 256 characters).
+</ParamField>
+
+## Account Verification
+
+New accounts require email verification to participate in events and teams.
+
+<Steps>
+  <Step title="Request Verification" icon="mail">
+    Log in and navigate to Account > Security.
+  </Step>
+  <Step title="Check Email">
+    Open the verification email from `no-reply@zwift.community`.
+  </Step>
+  <Step title="Confirm">
+````bash
+Click the link or enter code: ABC123XYZ
+````
+  </Step>
+</Steps>
+
+## User Roles and Permissions
+
+Zwift Community defines roles to control access.
+
+<Columns cols={2}>
+  <Card title="Member" icon="users">
+    Join teams, RSVP to events, view profiles.
+  </Card>
+  <Card title="Admin" icon="shield">
+    Manage teams, moderate events, assign roles.
+  </Card>
+  <Card title="Owner" icon="crown">
+    Full control: billing, deletions, role overrides.
+  </Card>
+  <Card title="Guest" icon="eye">
+    Read-only: view public events and teams.
+  </Card>
+</Columns>
+
+<Expandable title="Advanced Permissions" default-open="false">
+
+Admins can delegate sub-roles via the dashboard.
+
+```javascript
+// Example API call to assign role
+fetch('https://api.example.com/v1/users/{userId}/roles', {
+  method: 'POST',
+  headers: {
+    'Authorization': 'Bearer YOUR_TOKEN',
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({ role: 'admin' })
+});
+```
+
+</Expandable>
+
+## Password Recovery
+
+Recover access quickly if you forget your password.
+
+<Callout kind="alert">
+Never share recovery codes. Store them securely offline.
+</Callout>
+
+<Steps>
+  <Step title="Initiate Recovery" icon="key">
+    Go to `https://zwift.community/forgot-password` and enter your email.
+  </Step>
+  <Step title="Receive Link">
+    Check spam if not in inbox (expires in 15 minutes).
+  </Step>
+  <Step title="Reset Password">
+    Enter new password (min 12 chars, 1 special).
+  </Step>
+</Steps>
+
+## Security Best Practices
+
+- Rotate tokens every 90 days.
+- Use role-based access: assign minimal permissions.
+- Enable 2FA in Account > Security.
+
+For API examples:
+
+<Request tabs="JavaScript,cURL">
+````javascript
+const response = await fetch('https://api.example.com/v1/me', {
+  headers: { 'Authorization': 'Bearer YOUR_TOKEN' }
+});
+````
+````bash
+curl -H "Authorization: Bearer YOUR_TOKEN" https://api.example.com/v1/me
+````
+</Request>
+
+<Response>
+```json
+{
+  "id": "user123",
+  "email": "user@zwift.community",
+  "role": "member"
+}
+```
+</Response>
