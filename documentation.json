@@ -11,8 +11,8 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Documentation",
-        "icon": "book",
+        "tab": "Welcome",
+        "icon": "heart",
         "groups": [
           {
             "group": "Getting Started",
@@ -49,8 +49,8 @@
         ]
       },
       {
-        "tab": "API Reference",
-        "icon": "code",
+        "tab": "Community",
+        "icon": "lucide-person-standing",
         "groups": [
           {
             "group": "Endpoints",
@@ -58,6 +58,22 @@
             "pages": []
           }
         ]
+      },
+      {
+        "tab": "Games",
+        "icon": "bike",
+        "pages": [
+          {
+            "title": "Release History",
+            "path": "changelog",
+            "icon": "history"
+          }
+        ]
+      },
+      {
+        "tab": "OWL.BiKe",
+        "pages": [],
+        "icon": "bird"
       },
       {
         "tab": "Help Center",
@@ -100,17 +116,6 @@
                 "path": "help-center/guides/joining-events-owlbike"
               }
             ]
-          }
-        ]
-      },
-      {
-        "tab": "Changelog",
-        "icon": "clock",
-        "pages": [
-          {
-            "title": "Release History",
-            "path": "changelog",
-            "icon": "history"
           }
         ]
       }
