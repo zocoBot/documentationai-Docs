@@ -2,17 +2,21 @@
   "name": "Zwift Community",
   "colors": {
     "light": {
-      "brand": "#0C5460"
+      "brand": "#FF4100",
+      "heading": "#0b0b0b",
+      "text": "#374151"
     },
     "dark": {
-      "brand": "#65D4E7"
+      "brand": "#FF4100",
+      "heading": "#f2f2f2",
+      "text": "#c1c1c1"
     }
   },
   "navigation": {
     "tabs": [
       {
         "tab": "Welcome",
-        "icon": "heart",
+        "icon": "lucide-hand-metal",
         "groups": [
           {
             "group": "Getting Started",
@@ -34,7 +38,7 @@
       },
       {
         "tab": "Community",
-        "icon": "lucide-person-standing",
+        "icon": "heart-handshake-icon",
         "groups": [
           {
             "group": "Endpoints",
@@ -109,5 +113,9 @@
         ]
       }
     ]
-  }
+  },
+  "template": "classic",
+  "logo-dark": "https://blob-cdn.documentation.ai/org-0ccc17ee-e5a1-4ac8-94af-2a0fb253b983/doc-ecf68f51-979c-4843-83bc-775609034adc/1786309549152-hh7btf4k9g-owl-spreadwing-logo-white.png?fm=auto&auto=compress%2Cformat",
+  "logo-light": "https://blob-cdn.documentation.ai/org-0ccc17ee-e5a1-4ac8-94af-2a0fb253b983/doc-ecf68f51-979c-4843-83bc-775609034adc/1786309586777-pi2de8v291-owl-spreadwing-logo-black.webp?fm=auto&auto=compress%2Cformat",
+  "favicon": "https://blob-cdn.documentation.ai/org-0ccc17ee-e5a1-4ac8-94af-2a0fb253b983/doc-ecf68f51-979c-4843-83bc-775609034adc/1786309586777-pi2de8v291-owl-spreadwing-logo-black.webp?fm=auto&auto=compress%2Cformat"
 }
