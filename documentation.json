@@ -2,8 +2,8 @@
   "name": "Zwift Community",
   "colors": {
     "light": {
-      "brand": "#FF4100",
-      "heading": "#ff00ff",
+      "brand": "#ff00ff",
+      "heading": "#FF4100",
       "text": "#374151"
     },
     "dark": {
