@@ -125,5 +125,11 @@
         "link": ""
       }
     }
-  }
+  },
+  "initialRoute": "introduction",
+  "customCss": [
+    {
+      "src": "styles/support.css"
+    }
+  ]
 }
