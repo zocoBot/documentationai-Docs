@@ -29,22 +29,6 @@
                 "icon": "star"
               }
             ]
-          },
-          {
-            "group": "Zwift Community",
-            "icon": "layers",
-            "pages": [
-              {
-                "title": "Features",
-                "path": "features",
-                "icon": "file-text"
-              },
-              {
-                "title": "Authentication",
-                "path": "authentication",
-                "icon": "lock"
-              }
-            ]
           }
         ]
       },
