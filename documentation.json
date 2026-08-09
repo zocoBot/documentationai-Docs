@@ -3,7 +3,7 @@
   "colors": {
     "light": {
       "brand": "#FF4100",
-      "heading": "#0b0b0b",
+      "heading": "#FF4100",
       "text": "#374151"
     },
     "dark": {
