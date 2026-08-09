@@ -117,5 +117,13 @@
   "template": "atlas",
   "logo-dark": "https://blob-cdn.documentation.ai/org-0ccc17ee-e5a1-4ac8-94af-2a0fb253b983/doc-ecf68f51-979c-4843-83bc-775609034adc/1786309549152-hh7btf4k9g-owl-spreadwing-logo-white.png?fm=auto&auto=compress%2Cformat",
   "logo-light": "https://blob-cdn.documentation.ai/org-0ccc17ee-e5a1-4ac8-94af-2a0fb253b983/doc-ecf68f51-979c-4843-83bc-775609034adc/1786309586777-pi2de8v291-owl-spreadwing-logo-black.webp?fm=auto&auto=compress%2Cformat",
-  "favicon": "https://blob-cdn.documentation.ai/org-0ccc17ee-e5a1-4ac8-94af-2a0fb253b983/doc-ecf68f51-979c-4843-83bc-775609034adc/1786309586777-pi2de8v291-owl-spreadwing-logo-black.webp?fm=auto&auto=compress%2Cformat"
+  "favicon": "https://blob-cdn.documentation.ai/org-0ccc17ee-e5a1-4ac8-94af-2a0fb253b983/doc-ecf68f51-979c-4843-83bc-775609034adc/1786309586777-pi2de8v291-owl-spreadwing-logo-black.webp?fm=auto&auto=compress%2Cformat",
+  "navbar": {
+    "actions": {
+      "primary": {
+        "title": "Get Started",
+        "link": ""
+      }
+    }
+  }
 }
