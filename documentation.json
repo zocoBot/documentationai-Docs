@@ -48,6 +48,11 @@
         "icon": "bike",
         "pages": [
           {
+            "title": "Register",
+            "path": "register",
+            "icon": "user-plus"
+          },
+          {
             "title": "Release History",
             "path": "changelog",
             "icon": "history"
